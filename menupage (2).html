@@ -1,0 +1,60 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <title>
+      Steve Midkiff Project 3
+    </title>    
+    <meta charset="utf-8" />
+<link rel="stylesheet" href="project2.css">
+<link rel="stylesheet" href="menutable.css">
+
+ <!-- This is where your link tag goes when linking to an external style sheet. -->
+ 
+<!--This is the format you will use when entering JavaScript -->    
+<script type="text/javascript">
+/* <![CDATA[ */
+window.defaultStatus = "Freddie's Specials!";
+var specWindow;
+function showSpecials(linkTarget) {
+var propertyWidth=400;
+var propertyHeight=375;
+var winLeft = (screen.width-propertyWidth)/2;
+var winTop = (screen.height-propertyHeight)/2;
+var winOptions = "toolbar=no,menubar=no, location=no,scrollbars=no,resizable=no";
+winOptions += ",width=" + propertyWidth;
+winOptions += ",height=" + propertyHeight;
+winOptions += ",left=" + winLeft;
+winOptions += ",top=" + winTop;
+specWindow = window.open(linkTarget, "Specials", winOptions);specWindow.focus();
+}
+/* ]]> */
+</script>    
+    
+</head>
+
+  <body> 
+ <div> 
+<!-- Your XHTML here -->
+<h1 style="background-image: url(green.jpg)">Freddie's Fritter Menu</h1>
+    
+<div id="links"><strong>
+<a href="project3.html">Home</a> &nbsp;&nbsp;
+<a href="menupage.html">Menu</a></strong></div>
+<br />
+
+<script type="text/javascript" src="menu.js">
+</script>
+<br />
+<button onclick="showSpecials('specials.html')">Click here to see our weekly specials</button>
+<br />
+<hr />
+<div id="footer"><small><i>Copyright &copy; 2014 Git2Collaborating<br />
+<a href="mailto:Steve@Midkiff.com">Steve@Midkiff.com</a></i></small></div><br /><br />
+
+<!-- external javascript for validation -->  
+<script type="text/javascript" src="../validation.js">
+</script>    
+
+</div>
+  </body>
+  </html>

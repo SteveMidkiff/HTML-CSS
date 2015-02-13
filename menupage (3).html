@@ -1,0 +1,135 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <title>
+      Steve Midkiff Project 4
+    </title>    
+    <meta charset="utf-8" />
+<link rel="stylesheet" href="project2.css">
+<link rel="stylesheet" href="menutable.css">
+
+ <!-- This is where your link tag goes when linking to an external style sheet. -->
+ 
+<!--This is the format you will use when entering JavaScript -->    
+<script type="text/javascript">
+/* <![CDATA[ */
+window.defaultStatus = "Freddie's Specials!";
+var specWindow;
+function showSpecials(linkTarget) {
+var propertyWidth=400;
+var propertyHeight=375;
+var winLeft = (screen.width-propertyWidth)/2;
+var winTop = (screen.height-propertyHeight)/2;
+var winOptions = "toolbar=no,menubar=no, location=no,scrollbars=no,resizable=no";
+winOptions += ",width=" + propertyWidth;
+winOptions += ",height=" + propertyHeight;
+winOptions += ",left=" + winLeft;
+winOptions += ",top=" + winTop;
+specWindow = window.open(linkTarget, "Specials", winOptions);specWindow.focus();
+}
+
+function calculate(){
+    var error = false;
+    if (isNaN(document.forms[0].seafood.value)
+        || isNaN(document.forms[0].chicken.value)
+        || isNaN(document.forms[0].pork.value)
+        || isNaN(document.forms[0].veggie.value)
+        || isNaN(document.forms[0].apple.value)){
+        alert("A numeric value is required");
+        error = true;
+        }
+    else{
+        var numSeafood = parseInt(document.forms[0].seafood.value);
+        var totalSeafood = numSeafood * 12.95 * 1.0825;
+        var numChicken = parseInt(document.forms[0].chicken.value);
+        var totalChicken = numChicken * 8.95 * 1.0825;
+        var numPork = parseInt(document.forms[0].pork.value);
+        var totalPork = numPork * 9.95 * 1.0825;
+        var numVeggie = parseInt(document.forms[0].veggie.value);
+        var totalVeggie = numVeggie * 5.95 * 1.0825;
+        var numApple = parseInt(document.forms[0].apple.value);
+        var totalApple = numApple * 7.95 * 1.0825;        
+        }
+        
+        
+    if (!error){
+        var total = totalSeafood + totalChicken + totalPork + totalVeggie + totalApple;
+        window.alert("Your order totals: " + total.toFixed(2))
+        }
+    }
+/* ]]> */
+</script>    
+    
+</head>
+
+  <body> 
+ <div> 
+<!-- Your XHTML here -->
+<h1 style="background-image: url(green.jpg)">Freddie's Fritter Menu</h1>
+    
+<div id="links"><strong>
+<a href="project4.html">Home</a> &nbsp;&nbsp;
+<a href="menupage.html">Menu</a> &nbsp;&nbsp;
+<a href="apply.html">Application</a></strong></div>
+<br />
+
+<form>
+    <table class="table1" ><caption>Menu Items</caption>
+    <tr>
+        <td><img src='seafood.jpg' alt="seafood fritters"></td>
+        <td>Salty Seafood Fritters</td>
+        <td>The finest gulf shrimp and blue crab battered in a special Fedora family secret batter and deep-fried to perfection. These are our secret weapon, cause once you've had these you will keep coming back!</td>
+        <td>$12.95</td>
+        <td>Quantity<br /><input type="text" name="seafood" size="5" maxlength="5" /></td>
+    </tr>
+    <tr>
+        <td><img src='chicken.jpg' alt="chicken fritters"></td>
+        <td>Chicken Fritters</td>
+        <td>The finest free-range chickens plucked at their plumpest, chopped up into bite-sized pieces, battered and deep-fried to perfection. Try them with our special bar-b-que sauce.</td>
+        <td>$8.95</td>
+        <td>Quantity<br /><input type="text" name="chicken" size="5" maxlength="5" /></td>
+    </tr>
+    <tr>
+        <td><img src='pork.jpg' alt="pork fritters"></td>
+        <td>Pork Fritters</td>
+        <td>Better than any pork dumpling you've ever had, we take the finest cuts of pork, grind them up, batter and deep-fry them. Goes amazingly well with our spicy marinara sauce. Who knew!</td>
+        <td>$9.95</td>
+        <td>Quantity<br /><input type="text" name="pork" size="5" maxlength="5" /></td>
+    </tr>
+    <tr>
+        <td><img src='veggie.jpg' alt="veggie fritters"></td>
+        <td>Vegetarian Fritters</td>
+        <td>One for our veggie-loving friends. This is without a doubt the best way to eat your veggies! Corn, okra and red bell peppers are battered and fried to golden perfection. Comes with our special spicy veggie dipping sauce.</td>
+        <td>$5.95</td>
+        <td>Quantity<br /><input type="text" name="veggie" size="5" maxlength="5" /></td>
+    </tr>
+    <tr>
+        <td><img src='fruit.jpg' alt="apple fritters"></td>
+        <td>Fancy Fried Apple Fritters</td>
+        <td>The choicest selection of tart and tasty granny smith apples, battered a deep fried to perfection, then glazed with a creamy caramel sauce (and a little on the side for dipping).</td>
+        <td>$7.95</td>
+        <td>Quantity<br /><input type="text" name="apple" size="5" maxlength="5" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button onclick="calculate()">Click to total order</button></td>
+    </tr>
+    </table>
+</form>
+<br />
+<button onclick="showSpecials('specials.html')">Click here to see our weekly specials</button>
+<br />
+<hr />
+<div id="footer"><small><i>Copyright &copy; 2014 Git2Collaborating<br />
+<a href="mailto:Steve@Midkiff.com">Steve@Midkiff.com</a></i></small></div><br /><br />
+
+<!-- external javascript for validation -->  
+<script type="text/javascript" src="../../validation.js">
+</script>    
+
+</div>
+  </body>
+  </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <title>
+      Steve Midkiff
+    </title>    
+    <meta charset="utf-8" />
+
+
+ <!-- This is where your link tag goes when linking to an external style sheet. -->
+ 
+<!--This is the format you will use when entering JavaScript -->    
+<script type="text/javascript">
+/* <![CDATA[ */
+
+var oilPrice;
+
+if (oilPrice > 50) {
+if (oilPrice < 60)
+document.write("<p>Oil prices are between $50.00 and $60.00 a barrel.</p>");
+}
+/* ]]> */
+</script>    
+    
+</head>
+
+  <body> 
+ <div> 
+<p>Click the button to enter an oil price.</p>
+
+<button onclick="myFunction()">Enter Price</button>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function myFunction() {
+    var oilPrice = prompt("Please enter an oil price");
+    
+    if (oilPrice > 50) {
+    if (oilPrice < 60)
+    document.write("<p>Oil prices are between $50.00 and $60.00 a barrel.</p>");
+    }
+}
+
+/* ]]> */
+</script>
+  
+
+
+
+<!-- external javascript for validation -->  
+<script type="text/javascript" src="../validation.js">
+</script>    
+
+</div>
+  </body>
+  </html>

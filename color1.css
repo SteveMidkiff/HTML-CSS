@@ -1,0 +1,26 @@
+body{
+    background-color: #C2F0C2;
+    color: #000066;
+}
+h1{
+    background-color: #7ACC7A;
+    color: #0000FF;
+}
+p{
+    background-color: #C2F0C2;
+    color: #000066;
+}
+#footer{
+    background-color: #C2F0C2;
+    color: #000066;
+}
+#links{
+    background-color: #85E085;
+}
+#myimage{
+    float: left;
+    margin: 10px;
+}
+.clearleft{
+    clear: left;
+}
